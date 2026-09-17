@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://samreyes8933-lab.github.io/sam-reyes-portfolio/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,680&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,680&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0A0E10;
@@ -251,21 +251,6 @@
   .exp-item h4 { margin: 0 0 4px; font-size: 1.08rem; font-weight: 600; }
   .exp-item p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
   .exp-feature + .exp-item { border-top: none; }
-  .exp-feature-brand {
-    display: flex; align-items: center; justify-content: center; background: var(--bg-raised);
-  }
-  .brand-card-content { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; padding: 20px; max-width: 460px; }
-  .brand-card-content .exp-feature-time { position: static; margin: 0; }
-  .brand-role {
-    font-family: 'Poppins', var(--font-body); font-weight: 600; font-size: 1.25rem;
-    letter-spacing: 0.01em; color: var(--ink); margin: 0;
-  }
-  .brand-logo-plate {
-    background: #fff; border-radius: 18px; padding: 18px 28px;
-    box-shadow: inset 0 0 0 1px var(--line), 0 12px 30px -14px rgba(0,0,0,0.5);
-  }
-  .brand-logo-plate img { height: 52px; width: auto; display: block; }
-  .brand-desc { color: var(--ink-soft); font-size: 1rem; margin: 0; max-width: 48ch; }
 
   /* ---------- Experience feature (video/photo background) ---------- */
   .exp-feature {
@@ -536,12 +521,13 @@
           <p>Plan and run team social events and practices twice a week; contribute to team operating decisions for one of UCLA's largest club sports.</p>
         </div>
       </div>
-      <div class="exp-feature exp-feature-brand reveal">
-        <div class="brand-card-content">
+      <div class="exp-feature reveal">
+        <img class="exp-feature-media" src="assets/pixlee-logo.webp" alt="Pixlee TurnTo">
+        <div class="exp-feature-scrim"></div>
+        <div class="exp-feature-content">
           <span class="exp-feature-time"><span class="dot static"></span>Jul 2019</span>
-          <p class="brand-role">Marketing Intern</p>
-          <div class="brand-logo-plate"><img src="assets/pixlee-logo.webp" alt="Pixlee TurnTo"></div>
-          <p class="brand-desc">Researched Gen Z marketing trends and gathered social platform insights at an early-stage startup.</p>
+          <h3>Marketing Intern, Pixlee</h3>
+          <p>Researched Gen Z marketing trends and gathered social platform insights at an early-stage startup.</p>
         </div>
       </div>
       <div class="exp-feature reveal">
