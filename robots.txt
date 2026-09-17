@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samreyes8933-lab.github.io/sam-reyes-portfolio/sitemap.xml
