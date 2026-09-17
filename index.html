@@ -28,7 +28,6 @@
     --olive-soft: rgba(155,123,255,0.14);
     --amber: #FFC145;
     --amber-soft: rgba(255,193,69,0.14);
-    --ucla-blue: #2774AE;
     --ucla-gold: #FFD100;
     --line: rgba(255,255,255,0.11);
     --ghost: rgba(255,255,255,0.05);
@@ -139,17 +138,17 @@
   .status-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px 2px var(--accent); animation: pulseDot 1.8s ease-in-out infinite; }
   @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .ucla-badge {
-    display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600;
-    letter-spacing: 0.04em; color: var(--ucla-gold); background: var(--ucla-blue);
-    border: 1px solid color-mix(in srgb, var(--ucla-gold) 45%, transparent);
-    padding: 6px 14px; border-radius: 30px; margin-bottom: 26px; margin-left: 10px;
-    opacity: 0; animation: rise 0.7s ease-out 0.18s forwards;
+  .name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .ucla-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    opacity: 0; animation: rise 0.8s ease-out 0.3s forwards;
   }
-  .hero-ghost {
-    top: -10px; right: -20px; font-size: clamp(5rem, 13vw, 9.5rem);
+  .ucla-tag img { height: clamp(28px, 4vw, 44px); width: auto; display: block; }
+  .ucla-tag span {
+    font-family: var(--font-mono); font-size: clamp(0.85rem, 1.6vw, 1.05rem); font-weight: 600;
+    color: var(--ucla-gold); letter-spacing: 0.02em; padding-top: 4px;
   }
-  .hero .fields .ucla-word { color: var(--ucla-gold); font-weight: 600; }
+  @media (prefers-reduced-motion: reduce) { .ucla-tag { opacity: 1; animation: none; } }
 
   .hero h1 {
     font-family: var(--font-display); font-weight: 600;
@@ -431,7 +430,6 @@
 
 <header class="hero" id="home">
   <div class="hero-mesh" aria-hidden="true"><div class="blob"></div><div class="blob"></div><div class="blob"></div></div>
-  <div class="ghost-word hero-ghost" aria-hidden="true">UCLA</div>
   <div class="scanlines" aria-hidden="true"></div>
   <div class="hero-scene" id="heroScene" aria-hidden="true">
     <svg class="hero-line" viewBox="0 0 900 500" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" style="position:absolute; inset:0;">
@@ -441,9 +439,12 @@
     </svg>
   </div>
   <div class="wrap">
-    <span class="status-badge"><span class="dot"></span>Open to internships &amp; grad programs</span><span class="ucla-badge">UCLA</span>
-    <h1>Sam Reyes</h1>
-    <p class="fields"><span class="ucla-word">UCLA</span><span class="divider">·</span>International Development Studies<span class="divider">·</span>Statistics &amp; Data Science</p>
+    <span class="status-badge"><span class="dot"></span>Open to internships &amp; grad programs</span>
+    <div class="name-row">
+      <h1>Sam Reyes</h1>
+      <span class="ucla-tag"><img src="assets/ucla-logo.png" alt="UCLA"><span>'26</span></span>
+    </div>
+    <p class="fields">International Development Studies<span class="divider">·</span>Statistics &amp; Data Science</p>
     <div class="hero-actions">
       <a class="btn btn-primary magnetic" href="#projects">See the projects<span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="btn btn-ghost magnetic" href="#contact">Get in touch</a>
