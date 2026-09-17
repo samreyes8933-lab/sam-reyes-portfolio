@@ -138,21 +138,21 @@
   .status-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px 2px var(--accent); animation: pulseDot 1.8s ease-in-out infinite; }
   @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .name-row { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; }
-  .ucla-tag {
-    display: inline-flex; align-items: center; gap: 10px;
+  .name-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 22px; margin-bottom: 26px; }
+  .ucla-logo {
+    height: clamp(3.2rem, 9vw, 7rem); width: auto; display: inline-block;
     opacity: 0; animation: rise 0.8s ease-out 0.3s forwards;
   }
-  .ucla-tag img { height: clamp(28px, 4vw, 44px); width: auto; display: block; }
-  .ucla-tag span {
-    font-family: var(--font-mono); font-size: clamp(0.85rem, 1.6vw, 1.05rem); font-weight: 600;
-    color: var(--ucla-gold); letter-spacing: 0.02em; padding-top: 4px;
+  .ucla-year {
+    font-family: var(--font-display); font-weight: 600; font-size: clamp(3.2rem, 9vw, 7rem);
+    line-height: 1.08; letter-spacing: -0.01em; color: var(--ucla-gold);
+    opacity: 0; animation: rise 0.8s ease-out 0.35s forwards;
   }
-  @media (prefers-reduced-motion: reduce) { .ucla-tag { opacity: 1; animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .ucla-logo, .ucla-year { opacity: 1; animation: none; } }
 
   .hero h1 {
     font-family: var(--font-display); font-weight: 600;
-    font-size: clamp(3.2rem, 9vw, 7rem); line-height: 0.98; margin: 0 0 26px; letter-spacing: -0.01em;
+    font-size: clamp(3.2rem, 9vw, 7rem); line-height: 1.08; margin: 0; letter-spacing: -0.01em;
     opacity: 0;
     background: linear-gradient(115deg, var(--ink) 15%, var(--accent) 42%, var(--rose) 58%, var(--ink) 85%);
     background-size: 250% 100%;
@@ -442,7 +442,8 @@
     <span class="status-badge"><span class="dot"></span>Open to internships &amp; grad programs</span>
     <div class="name-row">
       <h1>Sam Reyes</h1>
-      <span class="ucla-tag"><img src="assets/ucla-logo.png" alt="UCLA"><span>'26</span></span>
+      <img class="ucla-logo" src="assets/ucla-logo.png" alt="UCLA">
+      <span class="ucla-year">'26</span>
     </div>
     <p class="fields">International Development Studies<span class="divider">·</span>Statistics &amp; Data Science</p>
     <div class="hero-actions">
