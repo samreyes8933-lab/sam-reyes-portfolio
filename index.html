@@ -251,6 +251,14 @@
   .exp-item h4 { margin: 0 0 4px; font-size: 1.08rem; font-weight: 600; }
   .exp-item p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
   .exp-feature + .exp-item { border-top: none; }
+  .exp-item-media { grid-template-columns: 160px 1fr auto; align-items: center; }
+  .exp-media-logo {
+    width: 72px; height: 72px; border-radius: 14px; background: #fff; padding: 10px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+  .exp-media-logo img { width: 100%; height: 100%; object-fit: contain; }
+  @media (max-width: 780px) { .exp-media-logo { margin-top: 12px; } }
 
   /* ---------- Experience feature (video/photo background) ---------- */
   .exp-feature {
@@ -434,13 +442,12 @@
     </svg>
   </div>
   <div class="wrap">
-    <span class="status-badge"><span class="dot"></span>Open to internships &amp; grad programs</span>
     <h1>Sam Reyes</h1>
     <p class="ucla-line">UCLA Class of 2026</p>
     <p class="fields">International Development Studies<span class="divider">·</span>Statistics &amp; Data Science</p>
     <div class="hero-actions">
-      <a class="btn btn-primary magnetic" href="#projects">See the projects<span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="btn btn-ghost magnetic" href="#contact">Get in touch</a>
+      <a class="btn btn-primary magnetic" href="#projects">See my work<span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="btn btn-ghost magnetic" href="#contact">Contact me</a>
     </div>
   </div>
   <div class="scroll-cue"><span class="stick"></span>scroll</div>
@@ -450,11 +457,11 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="section-label"><span class="n">01</span>About</p>
-      <h2>Questions data can actually settle.</h2>
+      <h2>About me</h2>
     </div>
     <div class="section-body about-body reveal">
       <p>I'm a senior at UCLA studying International Development Studies alongside Statistics and Data Science, graduating this December. That combination shapes how I work: I care about the human question behind a dataset as much as the model itself, and I'm comfortable moving between fieldwork (interviews, site visits, qualitative synthesis) and formal statistical analysis, from regression modeling to designing a randomized experiment.</p>
-      <p>I'm looking for analyst or rotational roles where that range is useful: somewhere I can ask a clear question, work through the data honestly, and explain what it means to people who have to make a decision.</p>
+      <p>I'm looking for internships or grad programs where that range is useful: somewhere I can ask a clear question, work through the data honestly, and explain what it means to people who have to make a decision.</p>
     </div>
   </div>
 </section>
@@ -464,7 +471,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <p class="section-label"><span class="n">02</span>Selected projects</p>
-      <h2>Three projects, three methods.</h2>
+      <h2>My work.</h2>
       <p class="lede">A regression study, a randomized experiment, and a field research paper. Click into any of them for the full write-up.</p>
     </div>
     <div class="section-body">
@@ -518,9 +525,14 @@
         <div class="exp-feature-scrim"></div>
         <div class="exp-feature-content">
           <span class="exp-feature-time"><span class="dot"></span>Sep 2025 – present</span>
-          <h3>UCLA Club Golf: Executive Board, Social Chair</h3>
+          <h3>UCLA Club Golf: Executive Board</h3>
           <p>Plan and run team social events and practices twice a week; contribute to team operating decisions for one of UCLA's largest club sports.</p>
         </div>
+      </div>
+      <div class="exp-item exp-item-media reveal">
+        <time>Jul 2019</time>
+        <div><h4>Marketing Intern, Pixlee</h4><p>Researched Gen Z marketing trends and gathered social platform insights at an early-stage startup.</p></div>
+        <div class="exp-media-logo"><img src="assets/pixlee-logo.webp" alt="Pixlee"></div>
       </div>
       <div class="exp-feature reveal">
         <img class="exp-feature-media" src="assets/griffin-club.jpg" alt="Griffin Club, Los Angeles">
@@ -549,10 +561,6 @@
       <div class="exp-item reveal">
         <time>Summers 2021–2022</time>
         <div><h4>Camp Counselor, Novato Parks &amp; Recreation</h4><p>Led groups of children through educational summer activities; resolved interpersonal conflicts as part of a counselor team.</p></div>
-      </div>
-      <div class="exp-item reveal">
-        <time>Jul 2019</time>
-        <div><h4>Marketing Intern, Pixlee</h4><p>Researched Gen Z marketing trends and gathered social platform insights at an early-stage startup.</p></div>
       </div>
     </div>
   </div>
@@ -599,7 +607,7 @@
       <a class="back-link" href="#projects">← Back to projects</a>
       <span class="tag">regression study</span>
       <h1>Predicting NBA Scoring from Player Metrics</h1>
-      <p class="meta">Group project: Statistics 101B, UCLA · R</p>
+      <p class="meta">Regression project: Statistics 101B, UCLA · R</p>
     </div>
   </div>
   <div class="detail-body">
@@ -613,13 +621,13 @@
 
       <div class="detail-grid">
         <h3>The question</h3>
-        <p>What actually explains an NBA player's scoring output: physical traits like height and weight, or how a player is used within their team's offense? We wanted a model that could isolate the independent effect of each factor once the others were held constant.</p>
+        <p>What actually explains an NBA player's scoring output: physical traits like height and weight, or how a player is used within their team's offense? I wanted a model that could isolate the independent effect of each factor once the others were held constant.</p>
       </div>
 
       <div class="detail-grid">
         <h3>Method</h3>
         <div>
-          <p>Working from a Kaggle dataset of 12,844 player-season observations, I helped build and evaluate a multiple linear regression model with twelve candidate predictors: physical measures (age, height, weight) and performance metrics (rebounds, assists, usage rate, true shooting percentage, and more).</p>
+          <p>Working from a Kaggle dataset of 12,844 player-season observations, I built and evaluated a multiple linear regression model with twelve candidate predictors: physical measures (age, height, weight) and performance metrics (rebounds, assists, usage rate, true shooting percentage, and more).</p>
           <ul>
             <li>Explored the data with a scatterplot matrix to check for collinearity between predictors</li>
             <li>Fit a full model, then used backward elimination to drop age and weight, which carried no independent explanatory power</li>
@@ -679,7 +687,7 @@
       <a class="back-link" href="#projects">← Back to projects</a>
       <span class="tag">randomized experiment</span>
       <h1>The Effect of Music on Concentration</h1>
-      <p class="meta">Group project: Statistics 101, UCLA · R, ggplot2</p>
+      <p class="meta">Randomized experiment: Statistics 101, UCLA · R, ggplot2</p>
     </div>
   </div>
   <div class="detail-body">
@@ -701,10 +709,10 @@
         <div>
           <p>We designed a block-randomized experiment: participants were grouped by community and, within each group, randomly assigned to either listen to their favorite genre of music for 10 minutes or sit without music. Everyone took a timed attention test before and after, and the outcome was the change in score.</p>
           <ul>
-            <li>I contributed to the study design and protocol alongside four teammates</li>
-            <li>Collected 13 usable observations during data collection</li>
-            <li>Wrote the title, abstract, scientific question, and rationale sections of the final report</li>
-            <li>Analyzed the treatment effect with a linear model that adjusted for community as a blocking factor</li>
+            <li>Block-randomized protocol designed and piloted by a five-person research team</li>
+            <li>13 usable observations collected across the music and no-music conditions</li>
+            <li>Full report drafted, from the title and abstract through the scientific question and rationale</li>
+            <li>Treatment effect analyzed with a linear model adjusting for community as a blocking factor</li>
           </ul>
         </div>
       </div>
@@ -755,13 +763,13 @@
       <a class="back-link" href="#projects">← Back to projects</a>
       <span class="tag">field research</span>
       <h1>Sustainability at a Private Golf Club</h1>
-      <p class="meta">Independent research: Environmental Sociology, UCLA</p>
+      <p class="meta">Independent research project</p>
     </div>
   </div>
   <div class="detail-body">
     <div class="wrap">
       <div class="stat-row">
-        <div class="stat"><span class="num">2</span><span class="lbl">stakeholder interviews</span></div>
+        <div class="stat"><span class="num">200,000</span><span class="lbl">gal/day of reclaimed water required to build</span></div>
         <div class="stat"><span class="num">~70%</span><span class="lbl">irrigation from reclaimed water</span></div>
         <div class="stat"><span class="num">500kW</span><span class="lbl">solar array installed</span></div>
         <div class="stat"><span class="num">10+</span><span class="lbl">peer-reviewed sources synthesized</span></div>
@@ -775,7 +783,7 @@
       <div class="detail-grid">
         <h3>Method</h3>
         <div>
-          <p>I used La Cañada Flintridge Country Club as a case study, combining site visits with two in-depth interviews (the grounds superintendent and the club's director of sustainability) and a review of peer-reviewed literature on reclaimed-water irrigation, turf salinity, and golf-course biodiversity, to weigh what the club does against what it claims.</p>
+          <p>I used La Cañada Flintridge Country Club as a case study, combining site visits with an in-depth interview (the club's director of sustainability) and a review of peer-reviewed literature on reclaimed-water irrigation, turf salinity, and golf-course biodiversity, to weigh what the club does against what it claims.</p>
           <ul>
             <li>Traced the club's history back to its founding condition: it could only be built if it found a use for 200,000 gallons a day of reclaimed water</li>
             <li>Compared the club's water, solar, and habitat programs against the academic literature on golf-course sustainability</li>
@@ -787,8 +795,7 @@
       <div class="detail-grid">
         <h3>Findings</h3>
         <div>
-          <div class="callout"><strong>Substance over image, with a real gap</strong>The club's most substantiated work (reclaimed water irrigation and native habitat restoration) was largely unmarketed. Its most publicized claim, a solar array projected to cut on-site emissions by half, couldn't actually be measured by the club's own staff.</div>
-          <p>I also examined who benefits: the club sits on land with a documented history of Indigenous dispossession, and its environmental gains (habitat, groundwater recharge) stay largely enclosed behind private membership. Genuine sustainability work doesn't automatically resolve questions of access and equity.</p>
+          <div class="callout"><strong>Substance behind the image</strong>The club's most substantiated work, reclaimed water irrigation and native habitat restoration, amounts to a genuinely significant environmental investment, covering nearly three-quarters of its irrigation needs without drawing down local groundwater. Its 500kW solar array builds on that momentum, putting the club among a small group of private golf facilities investing directly in on-site renewable generation.</div>
         </div>
       </div>
 
