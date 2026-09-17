@@ -138,21 +138,16 @@
   .status-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px 2px var(--accent); animation: pulseDot 1.8s ease-in-out infinite; }
   @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  .name-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 22px; margin-bottom: 26px; }
-  .ucla-logo {
-    height: clamp(3.2rem, 9vw, 7rem); width: auto; display: inline-block;
+  .ucla-line {
+    font-family: var(--font-mono); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em;
+    text-transform: uppercase; color: var(--ucla-gold); margin: 0 0 26px;
     opacity: 0; animation: rise 0.8s ease-out 0.3s forwards;
   }
-  .ucla-year {
-    font-family: var(--font-display); font-weight: 600; font-size: clamp(3.2rem, 9vw, 7rem);
-    line-height: 1.08; letter-spacing: -0.01em; color: var(--ucla-gold);
-    opacity: 0; animation: rise 0.8s ease-out 0.35s forwards;
-  }
-  @media (prefers-reduced-motion: reduce) { .ucla-logo, .ucla-year { opacity: 1; animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .ucla-line { opacity: 1; animation: none; } }
 
   .hero h1 {
     font-family: var(--font-display); font-weight: 600;
-    font-size: clamp(3.2rem, 9vw, 7rem); line-height: 1.08; margin: 0; letter-spacing: -0.01em;
+    font-size: clamp(3.2rem, 9vw, 7rem); line-height: 1.08; margin: 0 0 8px; letter-spacing: -0.01em;
     opacity: 0;
     background: linear-gradient(115deg, var(--ink) 15%, var(--accent) 42%, var(--rose) 58%, var(--ink) 85%);
     background-size: 250% 100%;
@@ -440,11 +435,8 @@
   </div>
   <div class="wrap">
     <span class="status-badge"><span class="dot"></span>Open to internships &amp; grad programs</span>
-    <div class="name-row">
-      <h1>Sam Reyes</h1>
-      <img class="ucla-logo" src="assets/ucla-logo.png" alt="UCLA">
-      <span class="ucla-year">'26</span>
-    </div>
+    <h1>Sam Reyes</h1>
+    <p class="ucla-line">UCLA Class of 2026</p>
     <p class="fields">International Development Studies<span class="divider">·</span>Statistics &amp; Data Science</p>
     <div class="hero-actions">
       <a class="btn btn-primary magnetic" href="#projects">See the projects<span class="btn-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
